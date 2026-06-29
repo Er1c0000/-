@@ -1,0 +1,289 @@
+<svg width="100%" viewBox="0 0 760 560" xmlns="http://www.w3.org/2000/svg"
+     style="font-family:'DejaVu Serif',serif; background:white;">
+
+<!-- ═══════════════════════════════════════════
+     LAYOUT CONSTANTS (comment only)
+     Canvas: 760 × 500
+     Top margin for title+labels: y=0..58  (title y=16, labels y=34/48)
+     Matrix area: y=58..390  (height=332)
+     Bottom area: y=390..500
+
+     Columns (x, width):
+       y-vec:   x=18,  w=46   cx=41
+       [=]:     x=74,  w=16   cx=82
+       H_PJ:    x=94,  w=198  cx=193
+       H_ISI:   x=296, w=124  cx=358
+       H_DCD:   x=424, w=28   cx=438
+       [·]:     x=456, w=16   cx=464
+       x-vec:   x=476, w=46   cx=499
+       [+]:     x=526, w=16   cx=534
+       v-box:   x=546, w=46   cx=569
+     ═══════════════════════════════════════════ -->
+
+<defs>
+  <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5"
+          markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+    <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke"
+          stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </marker>
+</defs>
+
+<!-- ══ TITLE ══ -->
+<text x="320" y="18" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a1a1a">
+  Redundant Global Dictionary
+  <tspan font-style="italic">H</tspan>
+  (N×M,  N ≫ M)
+</text>
+
+<!-- ══ COLUMN HEADER LABELS: small y=27, bold y=40, brace y=50, matrix y=62 ══ -->
+<!-- TIE vector -->
+<text x="41"  y="34" text-anchor="middle" font-size="10" fill="#555">TIE vector</text>
+<text x="41"  y="50" text-anchor="middle" font-size="12" font-weight="bold" fill="#1a1a1a"><tspan font-style="italic">y</tspan> (N×1)</text>
+
+<!-- H_PJ -->
+<text x="193" y="34" text-anchor="middle" font-size="10" fill="#0C447C">PJ sub-dictionary</text>
+<text x="193" y="50" text-anchor="middle" font-size="12" font-weight="bold" fill="#0C447C"><tspan font-style="italic">H</tspan><tspan baseline-shift="sub" font-size="9">PJ</tspan>,  2K cols</text>
+
+<!-- H_ISI -->
+<text x="358" y="34" text-anchor="middle" font-size="10" fill="#085041">ISI sub-dictionary</text>
+<text x="358" y="50" text-anchor="middle" font-size="12" font-weight="bold" fill="#085041"><tspan font-style="italic">H</tspan><tspan baseline-shift="sub" font-size="9">ISI</tspan>,  2<tspan baseline-shift="super" font-size="9">L</tspan> cols</text>
+
+<!-- H_DCD -->
+<text x="438" y="34" text-anchor="middle" font-size="10" fill="#633806">DCD</text>
+<text x="438" y="50" text-anchor="middle" font-size="12" font-weight="bold" fill="#633806"><tspan font-style="italic">H</tspan><tspan baseline-shift="sub" font-size="9">DCD</tspan></text>
+
+<!-- x vector -->
+<text x="499" y="34" text-anchor="middle" font-size="10" fill="#555">Coeff. vector</text>
+<text x="499" y="50" text-anchor="middle" font-size="12" font-weight="bold" fill="#1a1a1a"><tspan font-style="italic">x</tspan> (M×1)</text>
+
+<!-- v/noise: center on noise box cx=631 -->
+<text x="631" y="34" text-anchor="middle" font-size="10" fill="#555">Noise</text>
+<text x="631" y="50" text-anchor="middle" font-size="12" font-weight="bold" fill="#1a1a1a"><tspan font-style="italic">v</tspan></text>
+
+<!-- ══ N brace (left of y-vec) ══ -->
+<line x1="12" y1="74" x2="12" y2="406"
+      stroke="#888" stroke-width="0.7"
+      marker-start="url(#arr)" marker-end="url(#arr)"/>
+<text x="5" y="240" text-anchor="middle" font-size="10" fill="#888" transform="rotate(-90,5,240)">N</text>
+
+
+<!-- ══ y vector box ══ -->
+<rect x="18" y="74" width="46" height="332" rx="3"
+      fill="#f5f4ed" stroke="#aaa" stroke-width="0.8"/>
+<!-- irregular TIE signal inside y-vec box -->
+<polyline points="40.6,82.0 40.4,86.0 40.3,90.1 42.4,94.1 41.5,98.1 37.6,102.1 39.8,106.2 39.6,110.2 39.6,114.2 40.5,118.2 41.3,122.3 44.1,126.3 44.5,130.3 43.4,134.3 40.6,138.4 38.2,142.4 39.9,146.4 43.6,150.4 42.7,154.5 41.7,158.5 42.8,162.5 38.4,166.5 38.7,170.6 40.8,174.6 43.1,178.6 41.6,182.6 42.3,186.7 42.4,190.7 43.8,194.7 39.9,198.7 41.8,202.8 37.7,206.8 32.5,210.8 34.4,214.8 34.7,218.9 39.4,222.9 41.7,226.9 38.4,230.9 41.5,235.0 38.8,239.0 39.5,243.0 39.4,247.0 40.3,251.1 42.6,255.1 43.6,259.1 43.4,263.1 44.1,267.2 44.0,271.2 41.3,275.2 39.4,279.2 38.8,283.3 41.0,287.3 40.3,291.3 46.4,295.3 42.2,299.4 39.0,303.4 41.7,307.4 45.0,311.4 44.7,315.5 45.3,319.5 47.1,323.5 44.4,327.5 39.5,331.6 38.8,335.6 42.0,339.6 38.0,343.6 39.3,347.7 40.6,351.7 40.0,355.7 42.2,359.7 43.2,363.8 48.1,367.8 46.8,371.8 43.0,375.8 40.8,379.9 38.8,383.9 42.1,387.9 40.2,391.9 40.4,396.0 42.5,400.0"
+          fill="none" stroke="#185FA5" stroke-width="1.4"
+          stroke-linecap="round" stroke-linejoin="round"/>
+
+
+<!-- ══ = sign ══ -->
+<text x="82" y="244" text-anchor="middle" dominant-baseline="central"
+      font-size="18" font-weight="bold" fill="#1a1a1a">=</text>
+
+<!-- ══ H_PJ block (x=94, w=198) ══ -->
+<rect x="94" y="74" width="198" height="332" rx="4"
+      fill="#E6F1FB" stroke="#378ADD" stroke-width="0.9"/>
+
+<!-- cos columns (dark blue): x=102,122,142,  skip ...  ,232,252 -->
+<rect x="102" y="86" width="14" height="292" rx="1" fill="#185FA5" opacity="0.85"/>
+<rect x="120" y="86" width="10" height="292" rx="1" fill="#85B7EB" opacity="0.75"/>
+<rect x="134" y="86" width="14" height="292" rx="1" fill="#185FA5" opacity="0.85"/>
+<rect x="152" y="86" width="10" height="292" rx="1" fill="#85B7EB" opacity="0.75"/>
+<rect x="166" y="86" width="14" height="292" rx="1" fill="#185FA5" opacity="0.85"/>
+<rect x="184" y="86" width="10" height="292" rx="1" fill="#85B7EB" opacity="0.75"/>
+<text x="207" y="244" text-anchor="middle" dominant-baseline="central"
+      font-size="14" fill="#185FA5">···</text>
+<rect x="228" y="86" width="14" height="292" rx="1" fill="#185FA5" opacity="0.85"/>
+<rect x="246" y="86" width="10" height="292" rx="1" fill="#85B7EB" opacity="0.75"/>
+<rect x="260" y="86" width="14" height="292" rx="1" fill="#185FA5" opacity="0.85"/>
+<rect x="278" y="86" width="10" height="292" rx="1" fill="#85B7EB" opacity="0.75"/>
+
+<!-- legend inside H_PJ, bottom (y=376 inside matrix) -->
+<rect x="102" y="390" width="10" height="8" rx="1" fill="#185FA5" opacity="0.85"/>
+<text x="115" y="398" font-size="9" fill="#0C447C">cos</text>
+<rect x="136" y="390" width="10" height="8" rx="1" fill="#85B7EB" opacity="0.75"/>
+<text x="149" y="398" font-size="9" fill="#0C447C">sin</text>
+<text x="218" y="398" text-anchor="middle" font-size="9" fill="#185FA5">f<tspan baseline-shift="sub" font-size="7">1</tspan>…f<tspan baseline-shift="sub" font-size="7">K</tspan> (log-linear)</text>
+
+<!-- ══ 2K brace above H_PJ ══ -->
+<line x1="94" y1="62" x2="292" y2="62"
+      stroke="#185FA5" stroke-width="0.7"
+      marker-start="url(#arr)" marker-end="url(#arr)"/>
+
+<!-- ══ H_ISI block (x=296, w=124) ══ -->
+<rect x="296" y="74" width="124" height="332" rx="4"
+      fill="#E1F5EE" stroke="#1D9E75" stroke-width="0.9"/>
+
+<!-- ISI cell grid: 3 cols × 6 rows visible, then dots, then more -->
+<!-- col x: 304, 338, 372   row y: 68,96,124,152,180 then dots then 212,240,268,296,324,352 -->
+<rect x="304" y="84"  width="26" height="22" rx="2" fill="#5DCAA5" opacity="0.8"/>
+<rect x="338" y="84"  width="26" height="22" rx="2" fill="#9FE1CB" opacity="0.7"/>
+<rect x="372" y="84"  width="26" height="22" rx="2" fill="#5DCAA5" opacity="0.8"/>
+
+<rect x="304" y="110"  width="26" height="22" rx="2" fill="#9FE1CB" opacity="0.7"/>
+<rect x="338" y="110"  width="26" height="22" rx="2" fill="#5DCAA5" opacity="0.8"/>
+<rect x="372" y="110"  width="26" height="22" rx="2" fill="#9FE1CB" opacity="0.7"/>
+
+<rect x="304" y="136" width="26" height="22" rx="2" fill="#5DCAA5" opacity="0.8"/>
+<rect x="338" y="136" width="26" height="22" rx="2" fill="#9FE1CB" opacity="0.7"/>
+<rect x="372" y="136" width="26" height="22" rx="2" fill="#5DCAA5" opacity="0.8"/>
+
+<rect x="304" y="162" width="26" height="22" rx="2" fill="#9FE1CB" opacity="0.7"/>
+<rect x="338" y="162" width="26" height="22" rx="2" fill="#5DCAA5" opacity="0.8"/>
+<rect x="372" y="162" width="26" height="22" rx="2" fill="#9FE1CB" opacity="0.7"/>
+
+<!-- vertical dots -->
+<text x="317" y="202" text-anchor="middle" font-size="13" fill="#085041">⋮</text>
+<text x="351" y="202" text-anchor="middle" font-size="13" fill="#085041">⋮</text>
+<text x="385" y="202" text-anchor="middle" font-size="13" fill="#085041">⋮</text>
+
+<rect x="304" y="214" width="26" height="22" rx="2" fill="#5DCAA5" opacity="0.8"/>
+<rect x="338" y="214" width="26" height="22" rx="2" fill="#9FE1CB" opacity="0.7"/>
+<rect x="372" y="214" width="26" height="22" rx="2" fill="#5DCAA5" opacity="0.8"/>
+
+<rect x="304" y="240" width="26" height="22" rx="2" fill="#9FE1CB" opacity="0.7"/>
+<rect x="338" y="240" width="26" height="22" rx="2" fill="#5DCAA5" opacity="0.8"/>
+<rect x="372" y="240" width="26" height="22" rx="2" fill="#9FE1CB" opacity="0.7"/>
+
+<rect x="304" y="266" width="26" height="22" rx="2" fill="#5DCAA5" opacity="0.8"/>
+<rect x="338" y="266" width="26" height="22" rx="2" fill="#9FE1CB" opacity="0.7"/>
+<rect x="372" y="266" width="26" height="22" rx="2" fill="#5DCAA5" opacity="0.8"/>
+
+<rect x="304" y="292" width="26" height="22" rx="2" fill="#9FE1CB" opacity="0.7"/>
+<rect x="338" y="292" width="26" height="22" rx="2" fill="#5DCAA5" opacity="0.8"/>
+<rect x="372" y="292" width="26" height="22" rx="2" fill="#9FE1CB" opacity="0.7"/>
+
+<rect x="304" y="318" width="26" height="22" rx="2" fill="#5DCAA5" opacity="0.8"/>
+<rect x="338" y="318" width="26" height="22" rx="2" fill="#9FE1CB" opacity="0.7"/>
+<rect x="372" y="318" width="26" height="22" rx="2" fill="#5DCAA5" opacity="0.8"/>
+
+<rect x="304" y="344" width="26" height="22" rx="2" fill="#9FE1CB" opacity="0.7"/>
+<rect x="338" y="344" width="26" height="22" rx="2" fill="#5DCAA5" opacity="0.8"/>
+<rect x="372" y="344" width="26" height="22" rx="2" fill="#9FE1CB" opacity="0.7"/>
+
+<rect x="304" y="370" width="26" height="22" rx="2" fill="#5DCAA5" opacity="0.8"/>
+<rect x="338" y="370" width="26" height="22" rx="2" fill="#9FE1CB" opacity="0.7"/>
+<rect x="372" y="370" width="26" height="22" rx="2" fill="#5DCAA5" opacity="0.8"/>
+
+<!-- 2^L brace above H_ISI -->
+<line x1="296" y1="62" x2="420" y2="62"
+      stroke="#0F6E56" stroke-width="0.7"
+      marker-start="url(#arr)" marker-end="url(#arr)"/>
+
+<!-- ══ H_DCD block (x=424, w=28) ══ -->
+<rect x="424" y="74" width="28" height="332" rx="4"
+      fill="#FAEEDA" stroke="#BA7517" stroke-width="0.9"/>
+
+<!-- alternating +1/-1 cells -->
+<rect x="428" y="78"  width="20" height="22" rx="1" fill="#EF9F27" opacity="0.9"/>
+<text x="438" y="93"  text-anchor="middle" font-size="10" font-weight="bold" fill="#633806">+1</text>
+<rect x="428" y="102"  width="20" height="22" rx="1" fill="#EF9F27" opacity="0.3"/>
+<text x="438" y="117" text-anchor="middle" font-size="10" font-weight="bold" fill="#854F0B">−1</text>
+<rect x="428" y="126" width="20" height="22" rx="1" fill="#EF9F27" opacity="0.9"/>
+<text x="438" y="141" text-anchor="middle" font-size="10" font-weight="bold" fill="#633806">+1</text>
+<rect x="428" y="150" width="20" height="22" rx="1" fill="#EF9F27" opacity="0.3"/>
+<text x="438" y="165" text-anchor="middle" font-size="10" font-weight="bold" fill="#854F0B">−1</text>
+<rect x="428" y="174" width="20" height="22" rx="1" fill="#EF9F27" opacity="0.9"/>
+<text x="438" y="189" text-anchor="middle" font-size="10" font-weight="bold" fill="#633806">+1</text>
+<rect x="428" y="198" width="20" height="22" rx="1" fill="#EF9F27" opacity="0.3"/>
+<text x="438" y="213" text-anchor="middle" font-size="10" font-weight="bold" fill="#854F0B">−1</text>
+<rect x="428" y="222" width="20" height="22" rx="1" fill="#EF9F27" opacity="0.9"/>
+<text x="438" y="237" text-anchor="middle" font-size="10" font-weight="bold" fill="#633806">+1</text>
+<rect x="428" y="246" width="20" height="22" rx="1" fill="#EF9F27" opacity="0.3"/>
+<text x="438" y="261" text-anchor="middle" font-size="10" font-weight="bold" fill="#854F0B">−1</text>
+<rect x="428" y="270" width="20" height="22" rx="1" fill="#EF9F27" opacity="0.9"/>
+<text x="438" y="285" text-anchor="middle" font-size="10" font-weight="bold" fill="#633806">+1</text>
+<rect x="428" y="294" width="20" height="22" rx="1" fill="#EF9F27" opacity="0.3"/>
+<text x="438" y="309" text-anchor="middle" font-size="10" font-weight="bold" fill="#854F0B">−1</text>
+<rect x="428" y="318" width="20" height="22" rx="1" fill="#EF9F27" opacity="0.9"/>
+<text x="438" y="333" text-anchor="middle" font-size="10" font-weight="bold" fill="#633806">+1</text>
+<rect x="428" y="342" width="20" height="22" rx="1" fill="#EF9F27" opacity="0.3"/>
+<text x="438" y="357" text-anchor="middle" font-size="10" font-weight="bold" fill="#854F0B">−1</text>
+<rect x="428" y="366" width="20" height="22" rx="1" fill="#EF9F27" opacity="0.9"/>
+<text x="438" y="381" text-anchor="middle" font-size="10" font-weight="bold" fill="#633806">+1</text>
+
+<!-- ══ dot (multiply) ══ -->
+<text x="464" y="244" text-anchor="middle" dominant-baseline="central"
+      font-size="18" font-weight="bold" fill="#1a1a1a">·</text>
+
+<!-- ══ x vector (x=476, w=46) ══ -->
+<rect x="476" y="74" width="46" height="332" rx="4"
+      fill="none" stroke="#aaa" stroke-width="0.9"/>
+
+<!-- x_PJ segment: rows y=62..195, two blue blocks -->
+<rect x="480" y="84"  width="38" height="12" rx="1" fill="#f5f4ed"/>
+<rect x="480" y="98"  width="38" height="12" rx="1" fill="#185FA5" opacity="0.85"/>
+<rect x="480" y="112"  width="38" height="12" rx="1" fill="#f5f4ed"/>
+<rect x="480" y="126" width="38" height="12" rx="1" fill="#f5f4ed"/>
+<rect x="480" y="140" width="38" height="12" rx="1" fill="#185FA5" opacity="0.85"/>
+<rect x="480" y="154" width="38" height="12" rx="1" fill="#f5f4ed"/>
+<rect x="480" y="168" width="38" height="12" rx="1" fill="#f5f4ed"/>
+<rect x="480" y="182" width="38" height="12" rx="1" fill="#f5f4ed"/>
+<rect x="480" y="196" width="38" height="12" rx="1" fill="#f5f4ed"/>
+
+<!-- divider -->
+<line x1="476" y1="212" x2="522" y2="212" stroke="#aaa" stroke-width="0.8"/>
+
+<!-- x_ISI segment -->
+<rect x="480" y="214" width="38" height="12" rx="1" fill="#f5f4ed"/>
+<rect x="480" y="228" width="38" height="12" rx="1" fill="#085041" opacity="0.85"/>
+<rect x="480" y="242" width="38" height="12" rx="1" fill="#f5f4ed"/>
+<rect x="480" y="256" width="38" height="12" rx="1" fill="#f5f4ed"/>
+<rect x="480" y="270" width="38" height="12" rx="1" fill="#085041" opacity="0.85"/>
+<rect x="480" y="284" width="38" height="12" rx="1" fill="#f5f4ed"/>
+<rect x="480" y="298" width="38" height="12" rx="1" fill="#f5f4ed"/>
+<rect x="480" y="312" width="38" height="12" rx="1" fill="#f5f4ed"/>
+<rect x="480" y="326" width="38" height="12" rx="1" fill="#f5f4ed"/>
+
+<!-- divider -->
+<line x1="476" y1="342" x2="522" y2="342" stroke="#aaa" stroke-width="0.8"/>
+
+<!-- x_DCD segment -->
+<rect x="480" y="344" width="38" height="12" rx="1" fill="#f5f4ed"/>
+<rect x="480" y="358" width="38" height="12" rx="1" fill="#854F0B" opacity="0.9"/>
+<rect x="480" y="372" width="38" height="12" rx="1" fill="#f5f4ed"/>
+<rect x="480" y="386" width="38" height="12" rx="1" fill="#f5f4ed"/>
+
+<!-- bracket labels for x segments -->
+<!-- x_PJ bracket -->
+<line x1="524" y1="74"  x2="530" y2="74"  stroke="#185FA5" stroke-width="0.7"/>
+<line x1="530" y1="74"  x2="530" y2="212" stroke="#185FA5" stroke-width="0.7"/>
+<line x1="524" y1="212" x2="530" y2="212" stroke="#185FA5" stroke-width="0.7"/>
+<text x="534" y="146" dominant-baseline="central" font-size="12" font-weight="bold"
+      font-style="italic" fill="#185FA5">x<tspan baseline-shift="sub" font-size="9">PJ</tspan></text>
+
+<!-- x_ISI bracket -->
+<line x1="524" y1="214" x2="530" y2="214" stroke="#085041" stroke-width="0.7"/>
+<line x1="530" y1="214" x2="530" y2="342" stroke="#085041" stroke-width="0.7"/>
+<line x1="524" y1="342" x2="530" y2="342" stroke="#085041" stroke-width="0.7"/>
+<text x="534" y="278" dominant-baseline="central" font-size="12" font-weight="bold"
+      font-style="italic" fill="#085041">x<tspan baseline-shift="sub" font-size="9">ISI</tspan></text>
+
+<!-- x_DCD bracket -->
+<line x1="524" y1="344" x2="530" y2="344" stroke="#854F0B" stroke-width="0.7"/>
+<line x1="530" y1="344" x2="530" y2="406" stroke="#854F0B" stroke-width="0.7"/>
+<line x1="524" y1="406" x2="530" y2="406" stroke="#854F0B" stroke-width="0.7"/>
+<text x="534" y="375" dominant-baseline="central" font-size="12" font-weight="bold"
+      font-style="italic" fill="#854F0B">x<tspan baseline-shift="sub" font-size="9">DCD</tspan></text>
+
+<!-- ══ + sign ══ -->
+<text x="590" y="244" text-anchor="middle" dominant-baseline="central"
+      font-size="18" font-weight="bold" fill="#1a1a1a">+</text>
+
+<!-- ══ v (noise) box ══ -->
+<rect x="606" y="218" width="50" height="52" rx="4"
+      fill="#f5f4ed" stroke="#aaa" stroke-width="0.8"/>
+<text x="631" y="238" text-anchor="middle" font-size="13" font-weight="bold"
+      font-style="italic" fill="#1a1a1a">v</text>
+<text x="631" y="256" text-anchor="middle" font-size="10" fill="#666">noise</text>
+
+<!-- ══ M-columns brace (bottom, spanning H_PJ + H_ISI + H_DCD) ══ -->
+<line x1="94" y1="420" x2="452" y2="420"
+      stroke="#888" stroke-width="0.7"
+      marker-start="url(#arr)" marker-end="url(#arr)"/>
+<text x="273" y="434" text-anchor="middle" font-size="11" font-weight="bold" fill="#444">M columns total  (N ≫ M)</text>
+<text x="273" y="448" text-anchor="middle" font-size="11" font-weight="bold" fill="#444">N = 50,000        K ≈ 800        L = 5        M ≈ 1,633</text>
+
+
+
+</svg>

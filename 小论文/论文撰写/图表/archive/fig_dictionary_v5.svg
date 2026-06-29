@@ -1,0 +1,114 @@
+<svg width="100%" viewBox="0 0 440 285" xmlns="http://www.w3.org/2000/svg"
+     style="font-family:'DejaVu Serif',serif; background:white;">
+
+<!--
+  Brace labels (text bottom):  y≈13
+  Brace lines:                 y=22
+  Matrix top:                  y=26
+  Matrix bottom:               y=234  (height=208)
+  N brace:                     y=26..234
+  Legend inside H_PJ:          y=214..222
+  M brace:                     y=244
+  Bottom text:                 y=257, y=272
+-->
+
+<defs>
+  <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5"
+          markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+    <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke"
+          stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </marker>
+</defs>
+
+<!-- ── brace labels (text sits above line with clear gap) ── -->
+<text x="110" y="13" text-anchor="middle" dominant-baseline="auto"
+      font-size="11" font-weight="bold" fill="#0C447C">
+  <tspan font-style="italic">H</tspan><tspan baseline-shift="sub" font-size="8">PJ</tspan>,  2K cols
+</text>
+<line x1="10"  y1="22" x2="210" y2="22" stroke="#185FA5" stroke-width="0.8"
+      marker-start="url(#arr)" marker-end="url(#arr)"/>
+
+<text x="269" y="13" text-anchor="middle" dominant-baseline="auto"
+      font-size="11" font-weight="bold" fill="#085041">
+  <tspan font-style="italic">H</tspan><tspan baseline-shift="sub" font-size="8">ISI</tspan>,  2<tspan baseline-shift="super" font-size="8">L</tspan> cols
+</text>
+<line x1="214" y1="22" x2="324" y2="22" stroke="#0F6E56" stroke-width="0.8"
+      marker-start="url(#arr)" marker-end="url(#arr)"/>
+
+<text x="341" y="13" text-anchor="middle" dominant-baseline="auto"
+      font-size="11" font-weight="bold" fill="#633806">
+  <tspan font-style="italic">H</tspan><tspan baseline-shift="sub" font-size="8">DCD</tspan>
+</text>
+
+<!-- ══ H_PJ block (x=10, y=26, w=200, h=208) ══ -->
+<rect x="10" y="26" width="200" height="208" rx="4"
+      fill="#E6F1FB" stroke="#378ADD" stroke-width="1"/>
+<rect x="20"  y="36" width="14" height="172" rx="1" fill="#185FA5" opacity="0.85"/>
+<rect x="37"  y="36" width="10" height="172" rx="1" fill="#85B7EB" opacity="0.75"/>
+<rect x="51"  y="36" width="14" height="172" rx="1" fill="#185FA5" opacity="0.85"/>
+<rect x="68"  y="36" width="10" height="172" rx="1" fill="#85B7EB" opacity="0.75"/>
+<rect x="82"  y="36" width="14" height="172" rx="1" fill="#185FA5" opacity="0.85"/>
+<rect x="99"  y="36" width="10" height="172" rx="1" fill="#85B7EB" opacity="0.75"/>
+<text x="126" y="122" text-anchor="middle" dominant-baseline="central"
+      font-size="16" fill="#185FA5">···</text>
+<rect x="150" y="36" width="14" height="172" rx="1" fill="#185FA5" opacity="0.85"/>
+<rect x="167" y="36" width="10" height="172" rx="1" fill="#85B7EB" opacity="0.75"/>
+<rect x="181" y="36" width="14" height="172" rx="1" fill="#185FA5" opacity="0.85"/>
+<rect x="198" y="36" width="8"  height="172" rx="1" fill="#85B7EB" opacity="0.75"/>
+<!-- legend -->
+<rect x="20"  y="214" width="10" height="8" rx="1" fill="#185FA5" opacity="0.85"/>
+<text x="33"  y="221" font-size="10" fill="#0C447C">cos</text>
+<rect x="60"  y="214" width="10" height="8" rx="1" fill="#85B7EB" opacity="0.75"/>
+<text x="73"  y="221" font-size="10" fill="#0C447C">sin</text>
+<text x="155" y="221" text-anchor="middle" font-size="10" fill="#185FA5">
+  <tspan font-style="italic">f</tspan><tspan baseline-shift="sub" font-size="8">1</tspan>…<tspan font-style="italic">f</tspan><tspan baseline-shift="sub" font-size="8">K</tspan> (log-linear)
+</text>
+
+<!-- ══ H_ISI block (x=214, y=26, w=110, h=208) ══ -->
+<rect x="214" y="26" width="110" height="208" rx="4"
+      fill="#E1F5EE" stroke="#1D9E75" stroke-width="1"/>
+<rect x="224" y="36" width="26" height="188" rx="2" fill="#5DCAA5" opacity="0.75"/>
+<rect x="258" y="36" width="26" height="188" rx="2" fill="#9FE1CB" opacity="0.70"/>
+<rect x="292" y="36" width="26" height="188" rx="2" fill="#5DCAA5" opacity="0.75"/>
+<text x="237" y="122" text-anchor="middle" dominant-baseline="central"
+      font-size="12" font-weight="bold" fill="#085041">±1</text>
+<text x="271" y="122" text-anchor="middle" dominant-baseline="central"
+      font-size="12" font-weight="bold" fill="#085041">±1</text>
+<text x="305" y="122" text-anchor="middle" dominant-baseline="central"
+      font-size="12" font-weight="bold" fill="#085041">±1</text>
+
+<!-- ══ H_DCD block (x=328, y=26, w=26, h=208) ══ -->
+<rect x="328" y="26" width="26" height="208" rx="4"
+      fill="#FAEEDA" stroke="#BA7517" stroke-width="1"/>
+<rect x="332" y="32"  width="19" height="16" rx="1" fill="#EF9F27" opacity="0.9"/>
+<text x="341" y="43"  text-anchor="middle" font-size="10" font-weight="bold" fill="#633806">+1</text>
+<rect x="332" y="51"  width="19" height="16" rx="1" fill="#EF9F27" opacity="0.3"/>
+<text x="341" y="62"  text-anchor="middle" font-size="10" font-weight="bold" fill="#854F0B">−1</text>
+<rect x="332" y="70"  width="19" height="16" rx="1" fill="#EF9F27" opacity="0.9"/>
+<text x="341" y="81"  text-anchor="middle" font-size="10" font-weight="bold" fill="#633806">+1</text>
+<rect x="332" y="89"  width="19" height="16" rx="1" fill="#EF9F27" opacity="0.3"/>
+<text x="341" y="100" text-anchor="middle" font-size="10" font-weight="bold" fill="#854F0B">−1</text>
+<rect x="332" y="108" width="19" height="16" rx="1" fill="#EF9F27" opacity="0.9"/>
+<text x="341" y="119" text-anchor="middle" font-size="10" font-weight="bold" fill="#633806">+1</text>
+<text x="341" y="152" text-anchor="middle" dominant-baseline="central"
+      font-size="14" fill="#BA7517">⋮</text>
+<rect x="332" y="188" width="19" height="16" rx="1" fill="#EF9F27" opacity="0.3"/>
+<text x="341" y="199" text-anchor="middle" font-size="10" font-weight="bold" fill="#854F0B">−1</text>
+<rect x="332" y="208" width="19" height="16" rx="1" fill="#EF9F27" opacity="0.9"/>
+<text x="341" y="219" text-anchor="middle" font-size="10" font-weight="bold" fill="#633806">+1</text>
+
+<!-- ══ N brace (left, spans matrix height) ══ -->
+<line x1="3" y1="26" x2="3" y2="234"
+      stroke="#888" stroke-width="0.7"
+      marker-start="url(#arr)" marker-end="url(#arr)"/>
+<text x="0" y="130" text-anchor="middle" font-size="11" fill="#888"
+      transform="rotate(-90,0,130)">N</text>
+
+<!-- ══ M brace (bottom) ══ -->
+<line x1="10" y1="244" x2="354" y2="244"
+      stroke="#888" stroke-width="0.7"
+      marker-start="url(#arr)" marker-end="url(#arr)"/>
+<text x="182" y="257" text-anchor="middle" font-size="11" font-weight="bold" fill="#444">M columns total  (N ≫ M)</text>
+<text x="182" y="272" text-anchor="middle" font-size="11" fill="#555">N = 50,000    K ≈ 800    L = 5    M ≈ 1,633</text>
+
+</svg>
