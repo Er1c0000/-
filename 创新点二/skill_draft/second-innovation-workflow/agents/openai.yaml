@@ -1,0 +1,7 @@
+interface:
+  display_name: "第二创新点工作流"
+  short_description: "面向大论文的第二创新点遴选、文献检索与方案落地工作流"
+  default_prompt: "Use $second-innovation-workflow to start the second innovation workflow for this dissertation workspace."
+
+policy:
+  allow_implicit_invocation: true
