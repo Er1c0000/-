@@ -11,17 +11,17 @@ Execute the second-innovation workflow for this dissertation workspace. Treat th
 
 Read these files in order before taking substantive action:
 
-1. `创新点二/第二创新点硬规则卡片.md`
-2. `创新点二/第二创新点执行摘要.md`
-3. `创新点二/第二创新点阶段执行模板.md`
-4. `创新点二/第二创新点遴选工作流规范.md` only when boundary checks, detailed rules, or naming conventions need to be confirmed
+1. `创新点二/01_研究设计/任务一_创新点确认/创新点遴选工作流/第二创新点硬规则卡片.md`
+2. `创新点二/01_研究设计/任务一_创新点确认/创新点遴选工作流/第二创新点执行摘要.md`
+3. `创新点二/01_研究设计/任务一_创新点确认/创新点遴选工作流/第二创新点阶段执行模板.md`
+4. `创新点二/01_研究设计/任务一_创新点确认/创新点遴选工作流/第二创新点遴选工作流规范.md` only when boundary checks, detailed rules, or naming conventions need to be confirmed
 
 ## Hard Boundaries
 
 Enforce these rules throughout the run:
 
-- Do not read or rely on `创新点二/待定方向/待定方向汇总.md` unless the user explicitly lifts the restriction.
-- Do not read or rely on any file under `创新点二/工作流轮次1` unless the user explicitly lifts the restriction.
+- Do not read or rely on `创新点二/01_研究设计/任务一_创新点确认/待定方向/待定方向汇总.md` unless the user explicitly lifts the restriction.
+- Do not read or rely on any file under `创新点二/01_研究设计/任务一_创新点确认/工作流轮次1` unless the user explicitly lifts the restriction.
 - Keep the unfinished second innovation point neutral. Do not write it as a fixed direction or completed result.
 - Prefer general, high-importance problems that can still be justified by recent literature.
 - Prefer directions that connect naturally to the completed small paper and can be validated by simulation.
@@ -35,7 +35,7 @@ If the user explicitly names a phase, execute only that phase.
 
 If the user says "开始第二创新点构思" or gives an equivalent broad start request without naming a phase:
 
-1. Determine whether there is an accessible ongoing workflow round under `创新点二/` other than the forbidden `工作流轮次1`.
+1. Determine whether there is an accessible ongoing workflow round under `创新点二/01_研究设计/任务一_创新点确认/` other than the forbidden `工作流轮次1`.
 2. If the user named a target round, use that round.
 3. If no usable round is specified or available, start a new round and begin from phase 1.
 4. If the current phase is unclear, resolve it conservatively:
